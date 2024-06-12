@@ -10,7 +10,13 @@
         />
       </div>
       <div>
-        <button class="btn btn-primary" type="submit">Add</button>
+        <button
+          class="btn text-white"
+          style="background-color: #000000"
+          type="submit"
+        >
+          Save
+        </button>
       </div>
     </div>
     <div v-show="hasError" style="color: red">This field cannot be empty</div>
@@ -20,8 +26,8 @@
 <script>
 import { ref } from "vue";
 export default {
-    emits: ['add-todo'],
-  setup(props, {emit}) {
+  emits: ["add-todo"],
+  setup(props, { emit }) {
     const todo = ref("");
     const hasError = ref(false);
 

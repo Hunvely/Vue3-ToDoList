@@ -15,6 +15,7 @@
           {{ todo.subject }}
         </label>
       </div>
+      <button class="btn btn-primary btn-sm">Update</button>
       <button class="btn btn-danger btn-sm" @click="deleteTodo(index)">
         Delete
       </button>
@@ -30,9 +31,9 @@ export default {
       required: true,
     },
     todoStyle: {
-        type: Object,
-        required: true
-    }
+      type: Object,
+      required: true,
+    },
   },
   emits: ["toggle-todo", "delete-todo"],
   setup(props, { emit }) {

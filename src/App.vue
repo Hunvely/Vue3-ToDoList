@@ -10,7 +10,9 @@
       v-model="searchText"
       placeholder="Search"
     />
-    <div v-if="!filteredTodos.length">There is nothing to display.</div>
+    <div class="emptyContainer" v-if="!filteredTodos.length">
+      <div class="empty">There are no items displayed in the To-Do list..</div>
+    </div>
     <TodoList
       v-bind:todos="filteredTodos"
       v-bind:todoStyle="todoStyle"
@@ -76,4 +78,33 @@ export default {
 
 // CSS
 <style>
+h2 {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 2.5em;
+  color: #007bff;
+  background-color: #f8f9fa;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.emptyContainer {
+  text-align: center;
+}
+.empty {
+  display: inline-block;
+  font-family: "Arial", sans-serif;
+  font-size: 1.1em;
+  margin-top: 15px;
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 2px solid #dc3545;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
 </style>
